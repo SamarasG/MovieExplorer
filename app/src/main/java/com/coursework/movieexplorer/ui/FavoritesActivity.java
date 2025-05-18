@@ -32,6 +32,11 @@ public class FavoritesActivity extends AppCompatActivity {
         favoritesRepository = new FavoritesRepository(this);
         loadFavorites();
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadFavorites();
+    }
 
     private void loadFavorites() {
         List<Movie> favorites = favoritesRepository.getFavorites();
