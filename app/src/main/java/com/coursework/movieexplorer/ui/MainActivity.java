@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerView);
+        findViewById(R.id.buttonFavorites).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+            startActivity(intent);
+        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         movieRepository = new MovieRepository();

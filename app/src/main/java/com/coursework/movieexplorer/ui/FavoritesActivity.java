@@ -1,5 +1,6 @@
 package com.coursework.movieexplorer.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -42,7 +43,9 @@ public class FavoritesActivity extends AppCompatActivity {
         adapter = new MovieAdapter(favorites, this, new MovieAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Movie movie) {
-
+                Intent intent = new Intent(FavoritesActivity.this, DetailActivity.class);
+                intent.putExtra(DetailActivity.EXTRA_MOVIE, movie);
+                startActivity(intent);
             }
         });
         recyclerViewFavorites.setAdapter(adapter);
