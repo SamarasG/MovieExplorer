@@ -17,7 +17,7 @@
         android:theme="@style/Theme.MovieExplorer"
         tools:targetApi="31">
 
-        <!-- Main launcher activity -->
+        <!-- The main activity -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
