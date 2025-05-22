@@ -7,14 +7,14 @@ import retrofit2.http.Query;
 
 public interface Api {
 
-    // Get popular movies
+    // endpoint to get popular movies
     @GET("movie/popular")
     Call<MovieResponse> getPopularMovies(
             @Query("api_key") String apiKey,
             @Query("page") int page
     );
 
-    // Get now-playing (new) movies
+    // get the new movies
     @GET("movie/now_playing")
     Call<MovieResponse> getNowPlayingMovies(
             @Query("api_key") String apiKey,
